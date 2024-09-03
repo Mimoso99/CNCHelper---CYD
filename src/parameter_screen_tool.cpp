@@ -9,7 +9,7 @@ lv_obj_t *dropdown_tip;
 lv_obj_t *dropdown_flute;
 
 // Forward declaration of the callback function
-void proceed_to_pick_job(lv_event_t *e);
+void pick_a_job(lv_event_t *e);
 
 void create_parameters_tool_screen() {
     parameters_tool_screen = lv_obj_create(NULL);
@@ -65,27 +65,13 @@ void create_parameters_tool_screen() {
     lv_label_set_text(label_next, "Pick a Job");
     lv_obj_center(label_next);
 
-    lv_obj_add_event_cb(btn_next, proceed_to_pick_job, LV_EVENT_CLICKED, NULL);
+    lv_obj_add_event_cb(btn_next, pick_a_job, LV_EVENT_CLICKED, NULL);
 }
 
-// Callback function to proceed to the next screen
-void proceed_to_pick_job(lv_event_t *e) {
-    // Retrieve the selected options
-    int diameter = lv_roller_get_selected(roller_diameter);
-    int teeth = lv_roller_get_selected(roller_teeth);
-    const char *tip = lv_dropdown_get_text(dropdown_tip);
-    const char *flute = lv_dropdown_get_text(dropdown_flute);
-
-    // Here you would process these values or pass them to the next screen
-
-    // For now, just print them to the serial console
-    Serial.printf("Diameter: %d\n", diameter);
-    Serial.printf("Teeth: %d\n", teeth);
-    Serial.printf("Tip: %s\n", tip);
-    Serial.printf("Flute: %s\n", flute);
-
-    // Load the next screen, e.g., job selection screen
-    // lv_scr_load(job_screen);
+// Callback function to handle the Pick a Job button
+void pick_a_job(lv_event_t *e) {
+    // Load the job parameters screen
+    lv_scr_load(job_screen);
 }
 
 void show_parameters_tool_screen(lv_event_t *e) {
