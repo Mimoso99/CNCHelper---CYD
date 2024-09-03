@@ -6,20 +6,21 @@
 #include <lvgl.h>
 
 // Function prototypes for screen creation and event handling
-void create_main_screen();
-void create_screen_2();
-void create_screen_3();
+// Function prototypes for screen creation and event handling
+void create_home_screen();
+void create_parameters_screen();
+void create_settings_screen();
 void create_top_layer();
-void create_cpu_usage_display(void);
+void create_system_layer(void);
 
-void show_main_screen(lv_event_t *e);
-void show_screen_2(lv_event_t *e);
-void show_screen_3(lv_event_t *e);
+void show_home_screen(lv_event_t *e);
+void show_parameters_screen(lv_event_t *e);
+void show_settings_screen(lv_event_t *e);
 
 // Declare LVGL screen objects
-extern lv_obj_t *main_screen;
-extern lv_obj_t *screen_2;
-extern lv_obj_t *screen_3;
+extern lv_obj_t *home_screen;
+extern lv_obj_t *parameters_screen;
+extern lv_obj_t *settings_screen;
 extern lv_obj_t *home_button;
 
 #endif

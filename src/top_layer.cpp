@@ -14,7 +14,7 @@ void create_top_layer() {
     home_button = lv_btn_create(top_layer);
     lv_obj_set_size(home_button, 60, 40);
     lv_obj_align(home_button, LV_ALIGN_TOP_LEFT, 10, 10);
-    lv_obj_add_event_cb(home_button, show_main_screen, LV_EVENT_CLICKED, NULL);
+    lv_obj_add_event_cb(home_button, show_home_screen, LV_EVENT_CLICKED, NULL);
 
     lv_obj_t *label_home = lv_label_create(home_button);
     lv_label_set_text(label_home, "Home");

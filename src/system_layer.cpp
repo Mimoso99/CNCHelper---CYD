@@ -22,7 +22,7 @@ static void update_cpu_usage(lv_timer_t *timer)
 }
 
 // Function to create the CPU usage display on the top layer
-void create_cpu_usage_display(void)
+void create_system_layer(void)
 {
     top_layer = lv_layer_top(); // Create top layer
 

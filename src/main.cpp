@@ -135,18 +135,18 @@ void setup() {
   lv_disp_set_theme(disp, th);
 
   // Create the screens
-  create_main_screen();
-  create_screen_2();
-  create_screen_3();
+  create_home_screen();
+  create_parameters_screen();
+  create_settings_screen();
   
   // Set the main screen as the active screen
-  lv_scr_load(main_screen);
+  lv_scr_load(home_screen);
 
   // Create the top layer (home button)
   create_top_layer();
 
   // Create the system layer (CPU usage and/or debugging)
-  create_cpu_usage_display();
+  create_system_layer();
 }
 
 void loop() {
