@@ -137,6 +137,7 @@ void setup() {
   // Create the screens
   create_home_screen();
   create_parameters_screen();
+  create_parameters_tool_screen();
   create_settings_screen();
   
   // Set the main screen as the active screen

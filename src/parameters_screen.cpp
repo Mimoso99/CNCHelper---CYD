@@ -84,10 +84,10 @@ void material_button_event_cb(lv_event_t *e) {
 // Callback function to proceed to the next screen
 void proceed_to_next_screen(lv_event_t *e) {
     if (selected_material != NONE) {
-        // Here you would load the next screen, e.g.:
-        // lv_scr_load(tool_screen);
+        // Load the parameters tool screen
+        show_parameters_tool_screen(e);
     } else {
-        // Optionally, you could show a message asking the user to select a material first
+        // Optionally, show a message asking the user to select a material first
         Serial.println("Please select a material before proceeding.");
     }
 }
